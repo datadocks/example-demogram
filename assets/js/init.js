@@ -6,7 +6,7 @@
 },{}]},{},[1])(1)
 });
 
-// Get USer ID
+// Get User ID
 function getUserId(username) {
   var userId;
 
@@ -20,6 +20,6 @@ function getUserId(username) {
 // Determine Logged In User
 var loggedInUser = store.get("loggedInUser");
 if (typeof loggedInUser !== "undefined") {
-  dataLayer.push({userId: getUserId(loggedInUser)});
+  window[window.dataLayerName].push({userId: getUserId(loggedInUser)});
 }
 
