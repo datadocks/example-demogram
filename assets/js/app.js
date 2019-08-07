@@ -126,6 +126,11 @@ window.btoa = window.btoa || function () {
     this.reset();
   });
 
+  var leadId = $('#leadId');
+  if (leadId) {
+    leadId.val(generatePushID());
+  }
+
   $("#leadForm").on("submit", function(event) {
     var eventData;
 
